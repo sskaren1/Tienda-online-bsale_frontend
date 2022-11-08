@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;500&family=Stick+No+Bills:wght@400;600&display=swap');
+
+:root{
+    /* Fonts*/
+    --main-font: 'Stick No Bills', sans-serif; /*weight: 400,600*/
+    --secondary-font: 'Catamaran', sans-serif; /*weight: 300,500*/
+    --link-font: 'Stick No Bills', sans-serif; /*weight: 400,600*/
+    
+    /* Font weight */
+    --light: 300; 
+    --regular: 400; 
+    --medium: 500; 
+    --semi-bold: 600; 
+    
+    /* Colores */
+    --color-1: rgb(240, 175, 64);
+  
+    --neutral-1: rgb(0, 0, 0);
+    --neutral-2: rgb(255, 255, 255);
+    --neutral-3: rgb(74, 74, 74);
+}
