@@ -68,7 +68,7 @@
             </li> -->
             <li class="submenu">
               <div id="icon-cart" class="w-full text-center icon-cart">
-                <a href="./cart.html"
+                <a href="./basket.html"
                   ><i class="fa-solid fa-cart-shopping"></i>&nbsp;Cart</a
                 >
               </div>
@@ -113,18 +113,101 @@
             </li>
           </ul>
         </nav>
-
         <!-- <ul class="lista-submenu">
         </ul> -->
       </div>
     </header>
     <!-- Header -->
 
-    
+    <!-- Search of Products -->
+    <section class="search h-full">
+      <div class="contenido-hero">
+        <form action="#" id="busqueda" method="post" class="formulario">
+          <input
+            class="w-100 form-control"
+            type="text"
+            placeholder="Buscar Producto"
+            id="buscador"
+          />
+          <i class="fa-solid fa-magnifying-glass submit-buscador"></i>
+        </form>
+      </div>
+    </section>
+    <!-- Search of Products -->
 
-    <!-- Js -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- List of Products -->
+    <section id="lista-cursos h-full" class="container">
+      <div class="container mx-auto py-5">
+        <h1 id="encabezado" class="encabezado">Tienda Online Bsale</h1>
+          <!--card-->
+            <div
+              class="cardProduct w-full max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700"
+            >
+                <img
+                  class="p-8 rounded-t-lg"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvJ0KuFQkvgeUpIMNpARRhuaoDoGQjMHrvSA&usqp=CAU"
+                  alt="product image"
+                />
+              <div class="info-card px-5 pb-5">
+                  <h3
+                    class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+                  >
+                    Apple Watch Series 7 GPS
+                  </h3>             
+                <div class="flex justify-between items-center">
+                  <span class="text-3xl font-bold text-gray-900 dark:text-white"
+                    >$599</span
+                  <span class="text-3xl font-bold text-gray-900 dark:text-white"
+                    >$599</span
+                  >
+                  <a
+                    href="#"
+                    class="agregar-carrito text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    data-id="5"
+                    >Add to cart</a
+                  >
+                </div>
+              </div>
+            </div>
+      </div>
+    </section>
+    <!-- List of Products -->
+
+
+
+    
+    <!-- <footer id="footer h-full" class="footer">
+      <div class="container">
+        <div class="row align-items-center mb-3">
+          <div class="col-4 footer__site text-center">
+            <p class="text-white mb-0">Lima, Perú</p>
+          </div>
+          <div class="col-4 follow--footer text-center">
+            <a
+              href="https://github.com/sskaren1"
+              class="follow__icon"
+              title="Github de la desarrolladora"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/karen-obispo-campos"
+              class="follow__icon"
+              title="LinkedIn de la desarrolladora"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+          <div class="col-4 footer__contact-us text-center">
+            <a href="#" class="text-white">Contact me</a>
+          </div>
+        </div>
+      </div>
+    </footer> -->
+
     <!-- Tailwindcss -->
-    <script src="./js/index.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Js -->
+    <script src="js/index.js" type="module"></script>
   </body>
 </html>

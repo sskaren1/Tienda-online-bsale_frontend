@@ -1,4 +1,8 @@
+/* --------------------Base-------------------- */
 @import './variables.css';
 @import './typography.css';
 @import './globals.css';
+
+/* --------------------Home-------------------- */
 @import './header.css';
+@import './products.css';
