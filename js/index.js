@@ -1,7 +1,7 @@
 import fixedNavigation from './fixedNav.js';
 import { cartFull } from './cart.js';
 import getProducts from './service.js';
-
+import { loadEventListeners } from "./cart.js"
 
 // Evento para la navegación fija
 window.addEventListener("scroll", function(){
@@ -9,12 +9,12 @@ window.addEventListener("scroll", function(){
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Renderizado de los cursos en base a dbCursos
-  // setProductsInView();
-  // Cart Full
+  // Rendering of the products
+  getProducts();
+  // Render Basket
   cartFull();
-
-  // getProducts();
+  // Listeners
+  loadEventListeners();
 });
 
 

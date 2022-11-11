@@ -13,8 +13,9 @@
     --semi-bold: 600; 
     
     /* Colores */
-    --color-1: rgb(240, 175, 64);
-    --color-2: rgb(245, 52, 52);
+    --color-1: rgb(143, 0, 162);
+    --color-2: rgba(245, 52, 52, 1);
+    --color-3: rgba(66, 4, 97, 0.95);
   
     --neutral-1: rgb(0, 0, 0);
     --neutral-2: rgb(255, 255, 255);

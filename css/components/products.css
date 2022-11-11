@@ -1,0 +1,15 @@
+.cardProduct__container {
+    min-height: 32.25rem;
+}
+.cardProduct__container img {
+    max-height: 19.8rem;
+}
+.info-card h3 {
+    font-family: var(--secondary-font);
+}
+.info-card span {
+    font-weight: var(--medium);
+}
+.price {
+    text-decoration: line-through;
+}

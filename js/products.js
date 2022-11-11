@@ -1,68 +1,50 @@
-// Importing selectors
 import { containerCard } from "./selectors.js";
 
-// Función que renderiza los cursos
+// Function that renders the products.
 export function setProductsInView(products) {
   const imgUrl =
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvJ0KuFQkvgeUpIMNpARRhuaoDoGQjMHrvSA&usqp=CAU";
 
   products.map((product, index) => {
     const cardContent = document.createElement("div");
-    cardContent.classList.add("card");
+    cardContent.classList.add("cardProduct");
 
-    cardContent.innerHTML = `  
-      <div class="card"> 
+    cardContent.innerHTML = ` 
+      <div
+        class="cardProduct__container w-full max-w-sm flex flex-col justify-between p-8 bg-white border-gray-200 border rounded-lg shadow-md dark:bg-gray-700 dark:border-gray-700"
+      >
         <img
-          src=${product.url_image}
-          class="imagen-curso w-full"
+          class="rounded-t-lg mb-8"
+          src=${ (product.url_image=="" || product.url_image == null)  ? imgUrl : product.url_image }
+          alt="product image"
         />
         <div class="info-card">
-          <h3>${product.name}</h3>
-          <div class="flex justify-between items-center" >
-            <p class="precio">${product.price}</p>
-            <p class="precio-span">${product.price}</p>
+          <h3
+            class="text-2xl font-semibold tracking-tight text-gray-900 dark:text-white mb-5"
+          >
+            ${product.name}
+          </h3>
+          <div class="price flex justify-between items-center">
+            <span class="price text-3xl text-gray-900 dark:text-white"
+              >${product.price}</span
+            >
+            <span class="price-discount text-3xl text-gray-900 dark:text-white"
+              >${product.price-product.discount}</span
+            >
+            <button
+              href="#"
+              id="btnAddBasket"
+              class="add-basket text-white text-center text-xl font-semibold font-medium px-5 py-2.5 bg-purple-900 hover:bg-purple-600 focus:ring-4 focus:outline-none focus:ring-purple-300  focus:shadow-outline rounded-lg dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800"
+              data-id=${product.id}
+              >Add to cart</button
+            >
           </div>
-          <button
-            href="#"
-            type="button" class="btn btn-warning agregar-carrito text-white w-100 mx-auto"
-            data-id=${product.id}>
-            Agregar Al Carrito
-          </button>
-        </div>  
-      </div>       
+        </div>
+      </div>          
     `;
 
-    // Agregar el html creado al containerCard
+    // Add the created html to containerCard
     containerCard.appendChild(cardContent);
   });
 }
-// Función para leer los datos del curso
-// Lee el contenido del card al que le dimos click y extrae la información del curso
-export function leerDatosCurso(curso) {
-  // Crear un objeto con el contenido del curso seleccionado
-  const infoCurso = {
-    imagen: curso.querySelector("img").src,
-    titulo: curso.querySelector("h4").textContent,
-    precio: curso.querySelector(".precio-span").textContent,
-    id: curso.querySelector("button").getAttribute("data-id"),
-    cantidad: 1,
-  };
 
-  // Revisa si un elemento ya existe en el carrito
-  if (coursesInBasket.some((curso) => curso.id === infoCurso.id)) {
-    const cursos = coursesInBasket.map((curso) => {
-      if (curso.id === infoCurso.id) {
-        curso.cantidad++;
-        return curso;
-      } else {
-        return curso;
-      }
-    });
-    coursesInBasket = [...cursos];
-  } else {
-    coursesInBasket = [...coursesInBasket, infoCurso];
-  }
-
-  // console.log(coursesInBasket)
-  renderBasket();
-}

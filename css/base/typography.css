@@ -7,38 +7,9 @@ body{
 
 h1, h2, h3, h4 {
     font-family: var(--main-font);
-    font-weight: var(--semi-bold);
+    font-weight: var(--semi-bold) !important;
     text-align: center;    
 }
-
-h1 {
-    font-size: 2.5rem;
-}
-@media (min-width: 480px){
-    h1{
-        font-size: 3.5rem;
-    }
-}
-
-h2 {
-    font-size: 2.6rem;
-}
-@media (min-width: 480px){
-    h2{
-        font-size: 2.8rem;
-    }
-}
-
-h3 {
-    font-size: 2.2rem;
-}
-@media (min-width: 480px){
-    h3{
-        font-size: 2.3rem;
-    }
-}
-
-
 
 p, span {
     font-family: var(--secondary-font);
@@ -71,7 +42,6 @@ li {
     }
 }
 
-
 a {
     font-family: var(--link-font);
     font-weight: var(--medium); 
@@ -81,15 +51,7 @@ a {
     transition-property: color;
     transition-duration: .5s;
     cursor: pointer;  
-    font-size: 1.5rem;
-}
-a:hover {
-    color: var(--color-1);
-} 
-@media (min-width: 480px){
-    a{
-        font-size: 1.6rem;
-    }
+    font-size: 1.8rem;
 }
 
 i {
@@ -101,11 +63,10 @@ i {
     transition-property: color;
     transition-duration: .5s;
     cursor: pointer;  
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
-@media (min-width: 480px){
-    i{
-        font-size: 2.2rem;
-    }
+header i{
+    font-size: 2rem;
 }
+
 

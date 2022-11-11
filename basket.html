@@ -35,6 +35,72 @@
     />
   </head>
   <body>
+    <!-- Header -->
+    <header class="header">
+      <div
+        class="container mx-auto py-5 flex flex-col md:flex-row justify-between items-center"
+      >
+        <a href="./index.html" class="logo flex justify-center gap-x-1">
+          <i class="text-4xl fa-solid fa-champagne-glasses"></i>&nbsp;
+          <h1 class="logo__title text-white text-5xl">Bsale Store</h1>
+        </a>
+
+        <nav class="navegation">
+          <ul
+            class="text-white flex flex-row gap-x-20 justify-center items-center h-full"
+          >
+            <li>
+              <a href="./index.html"
+                ><i class="fa-sharp fa-solid fa-store"></i>&nbsp; Shop</a
+              >
+            </li>
+            <li class="submenu">
+              <div id="icon-cart" class="icon-cart w-full text-center">
+                <a href="./basket.html"
+                  ><i class="fa-solid fa-cart-shopping"></i>&nbsp; Cart</a
+                >
+              </div>
+              <div id="basket">
+                <!-- Table -->
+                <table id="list-basket" class="table-auto w-full text-xl text-center text-white dark:text-white">
+                  <thead class="uppercase bg-transparent dark:bg-transparent text-2xl">
+                    <tr class="border-b-2 border-gray-200">
+                      <th scope="col" class="px-6 py-3 ">Image</th>
+                      <th scope="col" class="px-6 py-3">Name</th>
+                      <th scope="col" class="px-6 py-3">Price</th>
+                      <th scope="col" class="px-6 py-3">Count</th>
+                      <th scope="col" class="px-6 py-3"><i class="fa-solid fa-trash"></i></th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+                <!-- Table -->
+
+                <!-- Buttons -->                
+                <button
+                  id="empty-basket"
+                  type="button"
+                  class="text-white text-center text-2xl font-semibold font-medium w-full px-5 py-2.5 mt-5 bg-pink-900 hover:bg-pink-600 focus:ring-4 focus:outline-none focus:ring-pink-300 focus:shadow-outline rounded-lg dark:bg-pink-600 dark:hover:bg-pink-700 dark:focus:ring-pink-900"
+                >
+                  Vaciar Carrito
+                </button>
+                <a
+                  href="./index.html"   
+                  type="button"
+                  class="text-white text-center text-2xl font-semibold font-medium block w-full px-5 py-2.5 mt-10 bg-rose-900 hover:bg-rose-600 focus:ring-4 focus:outline-none focus:ring-rose-300 focus:shadow-outline rounded-lg dark:bg-rose-600 dark:hover:bg-rose-700 dark:focus:ring-rose-900"
+                >
+                  Seguir comprando
+                </a>
+                <!-- Buttons -->
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Header -->
+    
+    <!-- Shoping Cart -->
     <div class="shoppingCart">
       <!-- {basket.length == 0 && ( -->
       <div class="container mx-auto text-center">
@@ -137,5 +203,11 @@
       </div>
       <!-- )} -->
     </div>
+    <!-- Shoping Cart -->
+
+    <!-- Tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Js -->
+    <script src="js/index.js" type="module"></script>
   </body>
 </html>

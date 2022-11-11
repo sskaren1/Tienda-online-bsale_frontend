@@ -1,9 +1,11 @@
 // Render basket
-export const basketContainer = document.querySelector('#lista-carrito tbody');
-export const emptyBasket = document.querySelector('#vaciar-carrito'); 
+export const basket = document.querySelector('#basket');
+export const basketContainer = document.querySelector('#list-basket tbody');
+export const btnEmptyBasket = document.querySelector('#btnEmptyBasket'); 
 
 // Icon cart
 export const iconCart = document.querySelector('#icon-cart');
 
 // Render products
 export const containerCard = document.querySelector(".content-card");
+

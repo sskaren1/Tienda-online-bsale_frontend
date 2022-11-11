@@ -1,8 +1,9 @@
 /* --------------------Base-------------------- */
-@import './variables.css';
-@import './typography.css';
-@import './globals.css';
+@import './base/variables.css';
+@import './base/typography.css';
+@import './base/globals.css';
 
 /* --------------------Home-------------------- */
-@import './header.css';
-@import './products.css';
+@import './components/header.css';
+@import './components/search.css';
+@import './components/products.css';
