@@ -118,38 +118,130 @@
     </header>
     <!-- Header -->
 
-    <!-- Search of Products -->
-    <section class="search h-full">
-      <div class="container max-w-screen-2xl w-11/12 mx-auto mt-10 relative">
-          <div
-            class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
-          >
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-          <input
-            type="text"
-            id="input-search"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Search for products"
-          />
+    <!-- Search-Filter-Order-Product -->
+    <section
+      class="search-filter-order flex flex-wrap justify-center items-center mt-10 gap-x-10 gap-y-10"
+    >
+      <!-- Search of Products -->
+      <div class="search h-full">
+        <div class="container max-w-screen-2xl w-11/12 mx-auto">
+          <form>
+            <label
+              for="search"
+              class="mb-2 text-xl font-medium text-gray-900 sr-only dark:text-gray-300"
+              >Search</label
+            >
+            <div class="relative">
+              <div
+                class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </svg>
+              </div>
+              <input
+                type="search"
+                id="search"
+                class="block p-4 pl-10 w-full text-xl text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Search product"
+                required
+              />
+              <button
+                type="submit"
+                class="text-white absolute right-2.5 bottom-2.5 bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-xl px-4 py-2 dark:bg-purple-700 dark:hover:bg-purple-800 dark:focus:ring-purple-800"
+              >
+                Search
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
+      <!-- Search of Products -->
+
+      <!-- Filter by Categories -->
+      <div class="filter h-full">
+        <div
+          class="container max-w-screen-2xl w-11/12 mx-auto d-md-flex justify-content-md-center"
+        >
+          <form class="card col-md-8 bg-light">
+            <div class="flex gap-x-2 items-center">
+              <label
+                for="filter"
+                class="block text-xl font-medium text-gray-900 dark:text-gray-400"
+                >Categories</label
+              >
+              <select
+                id="filter"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-xl text-center rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              >
+                <option selected class="text-left">-- Seleccione --</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <!-- <div id="resultado" class="mt-5 row"></div> -->
+      </div>
+      <!-- Filter by Categories -->
+
+      <!-- Order by Categories -->
+      <div class="order h-full">
+        <div
+          class="container max-w-screen-2xl w-11/12 mx-auto d-md-flex justify-content-md-center"
+        >
+          <form class="card col-md-8 bg-light">
+            <div class="flex gap-x-2 items-center">
+              <label
+                for="order"
+                class="block mb-2 text-xl font-medium text-gray-900 dark:text-gray-400"
+                >Order by</label
+              >
+              <select
+                id="order"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-xl text-center rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              >
+                <option selected class="text-left">-- Seleccione --</option>
+                <option class="text-left">Nombre ascendente</option>
+                <option class="text-left">Nombre descendente</option>
+                <option class="text-left">Menor a mayor precio</option>
+                <option class="text-left">Mayor a menor precio</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <!-- <div id="resultado" class="mt-5 row"></div> -->
+      </div>
+      <!-- Order by Categories -->
     </section>
-    <!-- Search of Products -->
+    <!-- Search-Filter-Order-Product -->
 
     <!-- List of Products -->
-    <section id="listProducts h-full">
+    <main id="listProducts min-h-screen">
       <div class="container max-w-screen-2xl mx-auto py-5">
         <h2 class="text-5xl mb-10">Products</h2>
         <div class="content-card flex flex-wrap gap-10 justify-center">
           <!--card-->
         </div>
       </div>
-    </section>
+    </main>
     <!-- List of Products -->
 
     <!-- Footer -->
     <footer class="w-full bg-black h-32">
-      <div class="container max-w-screen-2xl w-11/12 mx-auto flex justify-between items-center h-full">
+      <div
+        class="container max-w-screen-2xl w-11/12 mx-auto flex justify-between items-center h-full"
+      >
         <div class="text-center">
           <p class="text-white mb-0 text-2xl">Lima, Perú</p>
         </div>

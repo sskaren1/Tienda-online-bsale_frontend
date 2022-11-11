@@ -9,3 +9,6 @@ export const iconCart = document.querySelector('#icon-cart');
 // Render products
 export const containerCard = document.querySelector(".content-card");
 
+// Filter
+export const selectCategories = document.querySelector('#filter');
+

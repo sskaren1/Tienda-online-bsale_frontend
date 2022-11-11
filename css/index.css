@@ -5,5 +5,5 @@
 
 /* --------------------Home-------------------- */
 @import './components/header.css';
-@import './components/search.css';
+@import './components/search-filter-order.css';
 @import './components/products.css';
