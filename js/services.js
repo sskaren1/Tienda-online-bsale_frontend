@@ -2,10 +2,11 @@ import { setProductsInView } from './products.js';
 import { showCategories, showProductByCategorie } from './filter.js';
 import { showSortedProduct } from './sort.js';
 import { showSearchProduct } from './search.js';
+import { getProductsUrl, searchProductsUrl, filterProductsUrl, sortProductsUrl, getCategoriesUrl } from './endpoints.js';
 
 // Function to get the data
 export const getProducts = async () => {
-  const url = 'http://localhost:4001/api/products';
+  const url = getProductsUrl;
   try {
     const response = await fetch(url);
     const data = await response.json();
@@ -19,7 +20,7 @@ export const getProducts = async () => {
 
 // Function to get the categories
 export const getCategories = async () => {
-  const url = 'http://localhost:4001/api/categories';
+  const url = getCategoriesUrl;
 
   try {
     const response = await fetch(url);
@@ -35,7 +36,7 @@ export const getCategories = async () => {
 // Function to filter
 export const getFilterByCategory = async (e) =>  {
   const category = e.target.value;
-  const url = `http://localhost:4001/api/products/filter/categories/${category}`;
+  const url = `filterProductsUrl/${category}`;
 
   try {
     const response = await fetch(url);
@@ -54,7 +55,7 @@ export const getSortCategory = async (e) =>  {
   // console.log(type);
   let arr = type.split(' ');
   // console.log(arr[0],arr[1]);
-  const url = `http://localhost:4001/api/products/order/${arr[0]}/${arr[1]}`;
+  const url = `sortProductsUrl/${arr[0]}/${arr[1]}`;
 
   try {
     const response = await fetch(url);
@@ -71,7 +72,7 @@ export const getSortCategory = async (e) =>  {
 export const getSearchProduct = async (input) =>  {  
   const name = input;
   // console.log(name);
-  const url = `http://localhost:4001/api/products/${name}`;
+  const url = `searchProductsUrl/${name}`;
 
   try {
     const response = await fetch(url);
