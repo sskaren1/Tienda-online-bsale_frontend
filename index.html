@@ -49,21 +49,11 @@
           <ul
             class="text-white flex flex-row gap-x-20 justify-center items-center h-full"
           >
-            <!-- <li>
-              <a href="./index.html"
-                ><i class="fa-solid fa-wine-bottle"></i>&nbsp;Inicio</a
-              >
-            </li> -->
             <li>
               <a href="./index.html"
                 ><i class="fa-sharp fa-solid fa-store"></i>&nbsp; Shop</a
               >
             </li>
-            <!-- <li>
-              <a href="./cart.html"
-                ><i class="fa-solid fa-cart-shopping"></i>&nbsp;Cart</a
-              >
-            </li> -->
             <li class="submenu">
               <div id="icon-cart" class="icon-cart w-full text-center">
                 <a href="./basket.html"
@@ -85,7 +75,7 @@
                       <th scope="col" class="px-6 py-3">Price (Unid.)</th>
                       <th scope="col" class="px-6 py-3">Count</th>
                       <th scope="col" class="px-6 py-3">
-                        <button><i class="fa-solid fa-trash"></i></button>
+                        <i class="fa-solid fa-trash"></i>
                       </th>
                     </tr>
                   </thead>
@@ -112,8 +102,6 @@
             </li>
           </ul>
         </nav>
-        <!-- <ul class="lista-submenu">
-        </ul> -->
       </div>
     </header>
     <!-- Header -->
@@ -153,14 +141,16 @@
               </div>
               <input
                 type="search"
-                id="search"
+                id="inputSearch"
                 class="block p-4 pl-10 w-full text-xl text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Search product"
                 required
               />
               <button
-                type="submit"
-                class="text-white absolute right-2.5 bottom-2.5 bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-xl px-4 py-2 dark:bg-purple-700 dark:hover:bg-purple-800 dark:focus:ring-purple-800"
+                type="button"
+                id="btnInputSearch"
+                class="text-white absolute right-2.5 bottom-2.5 bg-fuchsia-700 hover:bg-fuchsia-800 focus:ring-4 focus:outline-none focus:ring-fuchsia-300 font-medium rounded-lg text-xl px-4 py-2 dark:bg-fuchsia-700 dark:hover:bg-fuchsia-800 dark:focus:ring-fuchsia-800"
+                disabled
               >
                 Search
               </button>
@@ -186,7 +176,12 @@
                 id="filter"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-xl text-center rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               >
-                <option selected class="text-left">-- Seleccione --</option>
+                <option selected disabled class="text-left">
+                  -- Seleccione --
+                </option>
+                <option value="all" class="text-left">
+                  all
+                </option>
               </select>
             </div>
           </form>
@@ -208,14 +203,20 @@
                 >Order by</label
               >
               <select
-                id="order"
+                id="sort"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-xl text-center rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               >
-                <option selected class="text-left">-- Seleccione --</option>
-                <option class="text-left">Nombre ascendente</option>
-                <option class="text-left">Nombre descendente</option>
-                <option class="text-left">Menor a mayor precio</option>
-                <option class="text-left">Mayor a menor precio</option>
+                <option selected disabled class="text-left">
+                  -- Seleccione --
+                </option>
+                <option value="asc name" class="text-left">Nombre A-Z</option>
+                <option value="desc name" class="text-left">Nombre Z-A</option>
+                <option value="asc price" class="text-left">
+                  Menor a mayor precio
+                </option>
+                <option value="desc price" class="text-left">
+                  Mayor a menor precio
+                </option>
               </select>
             </div>
           </form>
@@ -227,9 +228,9 @@
     <!-- Search-Filter-Order-Product -->
 
     <!-- List of Products -->
-    <main id="listProducts min-h-screen">
+    <main id="listProducts" class="mt-10 min-h-screen">
       <div class="container max-w-screen-2xl mx-auto py-5">
-        <h2 class="text-5xl mb-10">Products</h2>
+        <h2 class="text-6xl mb-10 text-fuchsia-800">Products</h2>
         <div class="content-card flex flex-wrap gap-10 justify-center">
           <!--card-->
         </div>

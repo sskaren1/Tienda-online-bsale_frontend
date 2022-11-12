@@ -1,4 +1,6 @@
-import { selectCategories } from './selectors.js';
+import { containerCard, selectCategories } from "./selectors.js";
+import { setProductsInView } from "./products.js";
+import { cleanHtml } from "./functions.js";
 
 export function showCategories(categories = []) {
   categories.forEach((categorie) => {
@@ -6,6 +8,12 @@ export function showCategories(categories = []) {
     const option = document.createElement("OPTION");
     option.value = name;
     option.textContent = name;
+    option.classList.add("text-left");
     selectCategories.appendChild(option);
   });
+}
+
+export function showProductByCategorie(filteredProducts = []) {
+  cleanHtml(containerCard);
+  setProductsInView(filteredProducts);
 }

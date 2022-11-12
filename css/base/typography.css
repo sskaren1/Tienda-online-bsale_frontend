@@ -61,8 +61,7 @@ i {
     text-align: center;
     text-decoration: none;
     transition-property: color;
-    transition-duration: .5s;
-    cursor: pointer;  
+    transition-duration: .5s; 
     font-size: 1.4rem;
 }
 header i{

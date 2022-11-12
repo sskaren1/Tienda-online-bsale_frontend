@@ -1,23 +1,11 @@
 import {
-  basket,
   basketContainer,
   btnEmptyBasket,
   iconCart,
-  containerCard
 } from "./selectors.js";
-
+import { cleanHtml } from './functions.js';
 
 let productsInBasket = [];
-
-// Listeners
-export function loadEventListeners() {
-  // Fires when "Add basket" is pressed
-  containerCard.addEventListener("click", addProduct);
-  // To remove the selected product from the basket
-  basket.addEventListener("click", removeProduct);
-  // To remove all items from the basket
-  btnEmptyBasket.addEventListener("click", removeBasket);
-}
 
 // Functions
 // Function basket rendering
@@ -45,6 +33,7 @@ export function cartFull() {
     basketContainer.appendChild(tr);
   }
 }
+
 // Function that shows the selected product in the basket
 export function renderBasket() {
   // Clean html
@@ -141,13 +130,7 @@ export function removeProduct(e) {
 
 // Function to remove all products from the cart in the DOM
 export function removeBasket() {
-  // slowly
-  // basketContainer.innerHTML = '';
-
-  // quickly
-  while (basketContainer.firstChild) {
-    basketContainer.removeChild(basketContainer.firstChild);
-  }
+  cleanHtml(basketContainer);
 
   productsInBasket = [];
 

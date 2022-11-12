@@ -1,7 +1,7 @@
+import { getProducts, getCategories } from './services.js';
+import { loadEventListeners } from './listeners.js';
 import fixedNavigation from './fixedNav.js';
 import { cartFull } from './cart.js';
-import { getProducts, getCategories } from './services.js';
-import { loadEventListeners } from "./cart.js"
 
 // Evento para la navegación fija
 window.addEventListener("scroll", function(){

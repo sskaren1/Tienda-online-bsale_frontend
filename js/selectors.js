@@ -12,3 +12,10 @@ export const containerCard = document.querySelector(".content-card");
 // Filter
 export const selectCategories = document.querySelector('#filter');
 
+// Sort
+export const sortSelector = document.querySelector('#sort');
+
+// Search
+export const inputSearch = document.querySelector('#inputSearch');
+export const btnInputSearch = document.querySelector('#btnInputSearch');
+
