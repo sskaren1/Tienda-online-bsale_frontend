@@ -36,7 +36,7 @@ export const getCategories = async () => {
 // Function to filter
 export const getFilterByCategory = async (e) =>  {
   const category = e.target.value;
-  const url = `filterProductsUrl/${category}`;
+  const url = `${filterProductsUrl}/${category}`;
 
   try {
     const response = await fetch(url);
@@ -55,7 +55,7 @@ export const getSortCategory = async (e) =>  {
   // console.log(type);
   let arr = type.split(' ');
   // console.log(arr[0],arr[1]);
-  const url = `sortProductsUrl/${arr[0]}/${arr[1]}`;
+  const url = `${sortProductsUrl}/${arr[0]}/${arr[1]}`;
 
   try {
     const response = await fetch(url);
@@ -72,7 +72,7 @@ export const getSortCategory = async (e) =>  {
 export const getSearchProduct = async (input) =>  {  
   const name = input;
   // console.log(name);
-  const url = `searchProductsUrl/${name}`;
+  const url = `${searchProductsUrl}/${name}`;
 
   try {
     const response = await fetch(url);
