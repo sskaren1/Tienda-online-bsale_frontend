@@ -72,7 +72,7 @@ export function readProductsData(prdto) {
     image: prdto.querySelector("img").src,
     name: prdto.querySelector("h3").textContent,
     price: prdto.querySelector(".price").textContent,
-    priceWithDiscount: prdto.querySelector(".price-discount").textContent,
+    priceWithDiscount: prdto.querySelector(".priceDiscount").textContent,
     count: 1,
     id: prdto.querySelector("button").getAttribute("data-id"),
   };

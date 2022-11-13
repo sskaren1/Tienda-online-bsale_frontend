@@ -31,10 +31,10 @@ export function setProductsInView(products) {
           >
             ${product.name}
           </h3>
-          <div class="price flex justify-between items-center">
-            <span class="price text-3xl text-gray-900 dark:text-white"
+          <div class="flex justify-between items-center">
+            <span class="price text-2xl text-gray-900 dark:text-white"
               >${product.price}</span
-            >
+            > &nbsp;
             <span class="priceDiscount text-3xl text-gray-900 dark:text-white"
               >${product.price - product.discount}</span
             >
