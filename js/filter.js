@@ -5,7 +5,7 @@ import { cleanHtml } from "./functions.js";
 export function showCategories(categories = []) {
   categories.forEach((categorie) => {
     const { name } = categorie;
-    const option = document.createElement("OPTION");
+    const option = document.createElement("option");
     option.value = name;
     option.textContent = name;
     option.classList.add("text-left");
