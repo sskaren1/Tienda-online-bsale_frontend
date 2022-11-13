@@ -13,3 +13,9 @@
 .price {
     text-decoration: line-through;
 }
+.priceDiscount {
+    text-decoration: none;
+}
+#btnAddBasket{
+    text-decoration: none;
+}

@@ -1,5 +1,5 @@
-const urlBackend = 'https://sk1-bsale-store-backend-production.up.railway.app'
-// const urlBackend = 'http://localhost:4001'
+// const urlBackend = 'https://sk1-bsale-store-backend-production.up.railway.app'
+const urlBackend = 'http://localhost:4001'
 
 export const getProductsUrl = `${urlBackend}/api/products`;
 

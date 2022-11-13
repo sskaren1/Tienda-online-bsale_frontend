@@ -9,27 +9,30 @@ const inputObj = {
 
 export function readInputSearch(e) {
   const input = e.target.value;
-  //   console.log(input);
 
   if (input === "") {
     disableButton();
   } 
   else if (input !== "" && e.key === "Enter") {
     e.preventDefault();
-    inputObj.name = input;    
-    // console.log("inputObj.name", inputObj.name);
+    inputObj.name = input; 
+
+    // Cleaning html of the seeker
     inputSearch.value = "";
+
     getSearchProduct(inputObj.name);
   } else {
     enableButton();
     inputObj.name = input;
-    // console.log("inputObj.name", inputObj.name);
   }
 }
 
 export function searchProduct(e) {
   e.preventDefault();
+
+  // Cleaning html of the seeker
   inputSearch.value = "";
+
   getSearchProduct(inputObj.name);
 }
 

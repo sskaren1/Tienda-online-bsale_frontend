@@ -1,7 +1,10 @@
 import { containerCard } from "./selectors.js";
+import { cleanHtml } from "./functions.js";
 
 // Function that renders the products.
 export function setProductsInView(products) {
+  cleanHtml(containerCard);  
+  
   const imgUrl =
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvJ0KuFQkvgeUpIMNpARRhuaoDoGQjMHrvSA&usqp=CAU";
 
@@ -15,7 +18,11 @@ export function setProductsInView(products) {
       >
         <img
           class="rounded-t-lg mb-8"
-          src=${ (product.url_image=="" || product.url_image == null)  ? imgUrl : product.url_image }
+          src=${
+            product.url_image == "" || product.url_image == null
+              ? imgUrl
+              : product.url_image
+          }
           alt="product image"
         />
         <div class="info-card">
@@ -28,8 +35,8 @@ export function setProductsInView(products) {
             <span class="price text-3xl text-gray-900 dark:text-white"
               >${product.price}</span
             >
-            <span class="price-discount text-3xl text-gray-900 dark:text-white"
-              >${product.price-product.discount}</span
+            <span class="priceDiscount text-3xl text-gray-900 dark:text-white"
+              >${product.price - product.discount}</span
             >
             <button
               href="#"
@@ -47,4 +54,3 @@ export function setProductsInView(products) {
     containerCard.appendChild(cardContent);
   });
 }
-

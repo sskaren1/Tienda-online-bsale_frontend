@@ -6,8 +6,9 @@ import {
   sortSelector,
   inputSearch,
   btnInputSearch,
+  btnCleanFilters
 } from "./selectors.js";
-import { getFilterByCategory, getSortCategory } from "./services.js";
+import { getFilterByCategory, getSortCategory, cleanFilters } from "./services.js";
 import { addProduct, removeProduct, removeBasket } from "./cart.js";
 import { readInputSearch, searchProduct } from "./search.js";
 
@@ -32,4 +33,5 @@ export function loadEventListeners() {
   inputSearch.addEventListener("keydown", readInputSearch);
   inputSearch.addEventListener("blur", readInputSearch);
   btnInputSearch.addEventListener("click", searchProduct);
+  btnCleanFilters.addEventListener("click", cleanFilters);
 }

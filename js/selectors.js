@@ -19,3 +19,5 @@ export const sortSelector = document.querySelector('#sort');
 export const inputSearch = document.querySelector('#inputSearch');
 export const btnInputSearch = document.querySelector('#btnInputSearch');
 
+export const btnCleanFilters = document.querySelector('#btnCleanFilters');
+
