@@ -222,6 +222,7 @@ export const getSearchProduct = async (input) => {
   }
 };
 
+// Clean filters
 function cleanOnlyFilters() {
   productDataLocalStorage.category = "";
   categoryProductLS();
