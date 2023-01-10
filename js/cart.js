@@ -48,7 +48,7 @@ export function renderBasket() {
           <img src="${image}" width=100>
       </td>
       <td>${name}</td>
-      <td class="text-center">${priceWithDiscount}</td>
+      <td class="text-center">${price}</td>
       <td class="text-center">${count} </td>
       <td class="text-center">
         <button type="button">
